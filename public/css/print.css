@@ -1,0 +1,114 @@
+nav, video, audio, object, embed { 
+    visibility: hidden; 
+}
+
+img {
+    max-width: 100%;
+}
+aside {
+    display:block;
+    page-break-before: always;
+}
+
+.wrap { 
+    width: 100%; 
+    margin: 0; 
+    float: none !important; 
+}
+
+p a {
+    word-wrap: break-word;
+}
+
+p {
+    widows: 3;
+}
+p {
+    orphans: 3;
+}
+.page-break { 
+    page-break-before: always; 
+}
+
+@page { margin: 0 }
+body { margin: 0 }
+.sheet {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  page-break-after: always;
+}
+
+/** Paper sizes **/
+body.A3           .sheet { width: 297mm; height: 419mm }
+body.A3.landscape .sheet { width: 420mm; height: 296mm }
+body.A4           .sheet { width: 210mm; height: 296mm }
+body.A4.landscape .sheet { width: 297mm; height: 209mm }
+body.A5           .sheet { width: 148mm; height: 209mm }
+body.A5.landscape .sheet { width: 210mm; height: 147mm }
+
+/** Padding area **/
+.sheet.padding-10mm { padding: 10mm }
+.sheet.padding-15mm { padding: 15mm }
+.sheet.padding-20mm { padding: 20mm }
+.sheet.padding-25mm { padding: 25mm }
+
+.logo-marca { 
+    max-height: 80px;
+    max-width: 80px;
+}
+
+  body { background: #e0e0e0 }
+  .sheet {
+    background: white;
+    box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
+    margin: 0.5cm;
+  }
+
+/** Fix for Chrome issue #273306 **/
+        body.A3.landscape { width: 420mm }
+body.A3, body.A4.landscape { width: 297mm }
+body.A4, body.A5.landscape { width: 210mm }
+body.A5                    { width: 148mm }
+body {
+   font: 12pt Georgia, "Times New Roman", Times, serif;
+   color: #000;
+   background: white;
+}
+
+h1 {
+   font-size: 24pt;
+}
+
+h2 {
+   font-size: 18pt;
+}
+
+h3 {
+   font-size: 14pt;
+}
+
+.texto-minimo {
+   font-size: 8pt;
+}
+
+.print {
+   visibility: visible; 
+}
+
+.no-print { 
+   visibility: hidden; 
+}
+div.x_title h2{
+    text-align: center;
+}
+.invoice-col{
+    font-size: 8pt;
+}
+
+footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+}

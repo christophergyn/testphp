@@ -1,0 +1,274 @@
+<?= $this->doctype() ?>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <?= $this->headTitle('Sistema Onix ')->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?= $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge');
+        ?>
+        <?= $this->headMeta()
+            ->appendName('description', 'Sistema Onix - Software de Gestão')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge');
+        ?>
+        <?= $this->headMeta()
+            ->appendName('empresa', 'Sistema Onix')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge');
+        ?>
+        <?= $this->headMeta()
+            ->appendName('author', 'Sistema Onix - Developement')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge');
+        ?>
+        <!-- Le styles -->
+        <?= $this->headLink(['rel' => 'shortcut icon', 'href' => $this->basePath() . 'img/favicon.ico'])
+            ->prependStylesheet($this->basePath('cssSite/bootstrap.css'))
+            ->prependStylesheet($this->basePath('cssSite/responsive.css'))
+            ->prependStylesheet($this->basePath('cssSite/flexslider.css'))
+                ->prependStylesheet($this->basePath('cssSite/theme-style.css'))
+                ->prependStylesheet($this->basePath('cssSite/custom-style.css'))
+                ->prependStylesheet($this->basePath('cssSite/flexslider.css'))
+        ?>
+        <!--Your custom colour override-->
+        <link href="#" id="colour-scheme" rel="stylesheet">
+
+        <!-- Le fav and touch icons - @todo: fill with your icons or remove -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="imgSite/icons/114x114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="imgSite/icons/72x72.png">
+        <link rel="apple-touch-icon-precomposed" href="imgSite/icons/default.png">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300|Rambla|Calligraffitti' rel='stylesheet' type='text/css'>
+        <!-- Scripts -->
+        <?= $this->headScript()
+            ->prependFile($this->basePath('jsSite/html5.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath('jsSite/bootstrap-transition.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-alert.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-affix.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-modal.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-dropdown.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-scrollspy.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-tab.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-tooltip.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-popover.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-button.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-collapse.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-carousel.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-typeahead.js'))
+            ->prependFile($this->basePath('jsSite/jquery.quicksand.js'))
+            ->prependFile($this->basePath('jsSite/jquery.flexslider-min.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap.min.js'))
+            ->prependFile($this->basePath('jsSite/script.js'))
+            ->prependFile($this->basePath('jsSite/jquery.js'))
+        ?>
+    </head>
+<body class="page page-index">
+<div id="navigation" class="wrapper">
+  <div class="navbar  navbar-static-top"> 
+    <!--Hidden Header Region-->
+    <div class="header-hidden">
+      <div class="header-hidden-inner container">
+        <div class="row-fluid">
+          <div class="span4">
+            <h3>A Empresa</h3>
+            <p>Com o objetivo de automatizar negócios comerciais.</p>
+            <a href="about.htm" class="btn btn-mini btn-primary">Saiba mais...</a> </div>
+          <div class="span4"> 
+            <!--@todo: replace with company contact details-->
+            <h3>Contato</h3>
+            <address>
+            <p><abbr title="Phone"><i class="icon-phone"></i></abbr> 62 4141-1566</p>
+            <p><abbr title="Email"><i class="icon-envelope"></i></abbr> contato@sistemaonix.com.br</p>
+            <p><abbr title="Address"><i class="icon-home"></i></abbr> Rua maria constant Quadra 7 Lote 20. Residencial Morumbi. Goiânia - GO.</p>
+            </address>
+          </div>
+          <div class="span4"> 
+            <!--Colour Switch for demo - @todo: remove in production-->
+            <div class="colour-switcher">
+              <h3>Cores</h3>
+              <a href="#green" class="green active _tooltip" data-placement="bottom" data-original-title="Green (Default)">Verde</a> 
+              <a href="#red" class="red _tooltip" data-placement="bottom" data-original-title="Red">Vermelho</a> 
+              <a href="#blue" class="blue _tooltip" data-placement="bottom" data-original-title="Blue">Azul</a>
+              <p>Cookies não estão habilitados caso não seja possível a alteração de cores.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--Header & Branding region-->
+    <div class="header">
+      <div class="header-inner container">
+        <div class="row-fluid">
+          <div class="span8"> 
+            <!--branding/logo--> 
+            <a class="brand" href="index.htm" title="Home">
+            	<h1><span>Sistemas</span>Onix<span>.</span></h1>
+            </a>
+            <div class="slogan">Automatizando o seu negócio.</div>
+          </div>
+          <!--header rightside-->
+          <div class="span4">
+            <div id="header-hidden-link"> <a href="#" class="show-hide" title="Clique aqui e será surpreendido." data-target=".header-hidden"><i></i>Abrir</a> </div>
+            <!--social media icons-->
+            <div class="social-media pull-right"> 
+              <!--@todo: replace with company social media details--> 
+              <a href="#"><i class="icon-twitter"></i></a> <a href="#"><i class="icon-facebook"></i></a> <a href="#"><i class="icon-linkedin"></i></a> <a href="#"><i class="icon-google-plus"></i></a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="navbar-inner"> 
+        <!--mobile collapse menu button--> 
+        <a class="btn btn-navbar pull-left" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+        <!--user menu-->
+        <ul class="nav user-menu pull-right">
+          <li><a href="./index.php?page=contato&slider=1" class="btn btn-primary signup">Contato</a></li>
+          <li><a href="<?php echo $this->url('login')?>" class="btn btn-primary signup">Login</a></li>
+        </ul>
+        
+        <!--everything within this div is collapsed on mobile-->
+        <div class="nav-collapse collapse"> 
+          
+          <!--main navigation-->
+          <ul class="nav" id="main-menu">
+            <li class="home-link"><a href="./index.php"><i class="icon-home hidden-phone"></i><span class="visible-phone">Home</span></a></li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" id="about-drop" data-toggle="dropdown">Empresa</a> 
+              <!-- Dropdown Menu -->
+              <ul class="dropdown-menu" role="menu" aria-labelledby="about-drop">
+                <li role="menuitem"><a href="./index.php?page=empresa&slider=1" tabindex="-1" class="menu-item">A Empresa</a></li>
+                <li role="menuitem"><a href="#" tabindex="-1" class="menu-item">Equipe</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="features.htm" class="dropdown-toggle menu-item" id="features-drop" data-toggle="dropdown">Produtos</a> 
+              <!-- Dropdown Menu -->
+              <ul class="dropdown-menu mega-menu" role="menu" aria-labelledby="features-drop">
+                <li class="mega-menu-wrapper" role="menuitem"> <span class="menu-title">Nossas linhas de Trabalho</span>
+                  <ul class="row-fluid" role="menu">
+                    <li class="span4" role="menuitem"> <a href="./index.php?page=produtos&slider=1"><img src="imgSite/features/feature-1.png" alt="Feature 1" /></a> <a href="./index.php?page=produtos&slider=1" tabindex="-1" class="menu-item">Dispositivos Móveis</a> <span>Desenvolvimento de Sistemas para dispositivos móveis android!</span> </li>
+                    <li class="span4" role="menuitem"> <a href="./index.php?page=produtos&slider=1"><img src="imgSite/features/feature-2.png" alt="Feature 2" /></a> <a href="./index.php?page=produtos&slider=1" tabindex="-1" class="menu-item">Desktop</a> <span>Desenvolvimento de Sistemas desktop!</span> </li>
+                    <li class="span4" role="menuitem"> <a href="./index.php?page=produtos&slider=1"><img src="imgSite/features/feature-4.png" alt="Feature 4" /></a> <a href="./index.php?page=produtos&slider=1" tabindex="-1" class="menu-item">Web</a> <span>Desenvolvimento de Sistemas WEB 2.0, sites institucionais, entre outros!</span> </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="./index.php?page=portfolio&slider=1" class="menu-item">Portfolio</a></li>
+            <li><a href="./index.php?page=suporte&slider=1" class="menu-item">Suporte</a></li>
+            <li><a href="./index.php?page=download&slider=1" class="menu-item">Download</a></li>
+            <li><a href="./index.php?page=contato&slider=1" class="menu-item">Contato</a></li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" id="blog-drop" data-toggle="dropdown">Blog +</a> 
+              <!-- Dropdown Menu -->
+              <ul class="dropdown-menu pull-left" role="menu" aria-labelledby="blog-drop">
+                <li role="menuitem"><a href="http://sistemaonix.blogspot.com.br" tabindex="-1" class="menu-item">Sistemas Onix - Tecnologia</a></li>
+                <li role="menuitem"><a href="http://automotosoft.blogspot.com.br" tabindex="-1" class="menu-item">Automotosoft - Notícias Corporativas</a></li>
+                <li role="menuitem"><a href="http://desenvolvendoaplicacoes.blogspot.com.br" tabindex="-1" class="menu-item">Blog do Desenvolvedor</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" id="pages-drop" data-toggle="dropdown">ADMIN</a> 
+              <!-- Dropdown Menu -->
+              <ul class="dropdown-menu pull-left" role="menu" aria-labelledby="pages-drop">
+                <li role="menuitem"><a href="./index.php?page=login&slider=1" tabindex="-1" class="menu-item">Login</a></li>
+                <li role="menuitem"><a href="./index.php?page=contato&slider=1" tabindex="-1" class="menu-item">Cadastre-se</a></li>
+                <li role="menuitem"><a href="http://www.google.com/a/automotosoft.com.br" tabindex="-1" class="menu-item">Email Corporativo</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!--/.nav-collapse --> 
+      </div><!--Menu -->
+    </div>
+  </div>
+</div>
+<div class="hero" id="highlighted">
+  <div class="inner"> 
+    <!--Flexslider Showshow-->
+    <section class="flexslider-wrapper container">
+      <div class="flexslider" data-slidernav="auto" data-transition="slide"> 
+        <!--The Slides-->
+        <div class="slides"> 
+        <!--Slide #1 with caption-->
+          <div class="slide row-fluid">
+            <div class="span7"><img src="imgSite/slides/panfleto1.png" alt="Slide 1" /></div>
+            <div class="span5 caption">
+              <h2>Sistema de Automação Comercial</h2>
+              <h4>Conheça <a href="./index.php?page=produtos&slider=1">mais este produto.</a></h4>
+              <p>A solução que sua Companhia procura!</p>
+              <a href="./index.php?page=contato&slider=1" class="btn btn-large btn-primary">Compre Já!</a> </div>
+          </div>
+          
+          <!--Slide #2 straight image 1170px wide x 390px high-->
+          <div class="slide row-fluid"> <img src="imgSite/slides/panfleto2.png" alt="Onix" /></div>
+          <!--Slide #3 & so on below--> 
+          <div class="slide row-fluid"> <img src="imgSite/slides/panfleto3.png" alt="Slide 2" /> </div>
+        </div>
+      </div>
+    </section>
+  </div><!-- Fim Slider -->
+</div>
+<div id="content">
+    <div class="container">
+        <?php echo $this->content; ?>
+    </div>
+</div>
+
+<div id="content-below" class="wrapper">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="upsell"> <small class="muted">Suporte Técnico <span class="spacer">//</span> Garantia <span class="spacer">//</span> Consultoria <span class="spacer">//</span> Planos mensais <span class="spacer">//</span> </small> <a href="pricing.htm" class="btn btn-primary">Seja nosso parceiro! <i class="icon-arrow-right"></i></a> </div>
+    </div>
+  </div>
+</div>
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="span3 col">
+        <div class="block contact-block"> 
+          <!--@todo: replace with company contact details-->
+          <h3>Contato</h3>
+          <address>
+          <p><abbr title="Phone"><i class="icon-phone"></i></abbr> 62 4141-1566</p>
+          <p><abbr title="Email"><i class="icon-envelope"></i></abbr><a href="mailto:contato@sistemaonix.com.br">contato@sistemaonix.com.br</a></p>
+          <p><abbr title="Address"><i class="icon-home"></i></abbr> Rua Maria Constant Quadra 7, Lote 20, Residencial Morumbi, Goiânia - GO.</p>
+          </address>
+        </div>
+      </div>
+      <div class="span5 col">
+        <div class="block">
+          <h3>Empresa</h3>
+          <p>Empresa com foco em automatização de negócios, com uso de tecnologias de última geração.</p>
+        </div>
+      </div>
+      <div class="span4 col">
+        <div class="block newsletter">
+          <h3>Newsletter</h3>
+          <p>Noticias do mundo dos negócios e tecnologia.</p>
+          <!--@todo: replace with mailchimp code-->
+          <form class="form-inline">
+            <div class="input-append">
+              <input class="input-medium" type="text" placeholder="Email" />
+              <button class="btn btn-primary" type="button">Cadastrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div id="toplink"><a href="#top" class="top-link" title="Back to top">Voltar ao Topo<i class="icon-chevron-up"></i></a></div>
+      <!--@todo: replace with company copyright details-->
+      <div class="subfooter">
+        <div class="span6">
+          <p>Site desenvolvido por <a href="#">Sistema Onix</a> | Copyright 2014 &copy; Sistemas Onix</p>
+        </div>
+        <div class="span6">
+          <ul class="inline pull-right">
+            <li><a href="#">Termos</a></li>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<?php echo $this->doctype(); ?>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+	<?php ini_set( 'default_charset', 'utf-8');?>
+	<?php echo $this->headTitle('Sistema Onix - Administrativo')?>
+
+    <?php echo $this->headMeta()
+    	->appendName('viewport', 'width=device-width, initial-scale=1.0')
+        ->appendHttpEquiv('X-UA-Compatible', 'IE=edge');
+    ?>
+
+	<!-- Le styles -->
+    <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'images/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+    	//<!-- Custom Theme Style -->
+    	->prependStylesheet($this->basePath('css/custom.min.css'))
+        ->prependStylesheet($this->basePath('css/bootstrap.min-v3.0.3.css'))
+    	// <!-- Font Awesome -->
+        //->prependStylesheet($this->basePath('css/font-awesome-5-0-10/css/fontawesome-all.min.css'))
+        ->prependStylesheet($this->basePath('css/font-awesome/css/font-awesome.min.css'))
+    	//<!-- iCheck -->
+        ->prependStylesheet($this->basePath('css/iCheck/skins/flat/green.css'))
+    	//<!-- bootstrap-progressbar -->
+    	//<!-- jVectorMap -->
+    	->prependStylesheet($this->basePath('css/maps/jquery-jvectormap-2.0.3.css'))
+		//<!--  bootstrap-wysiwyg -->
+    	->prependStylesheet($this->basePath('js/google-code-prettify/bin/prettify.min.css'))
+		//<!--  Select2 -->
+    	->prependStylesheet($this->basePath('js/select2/dist/css/select2.min.css'))
+		//<!--  Switchery -->
+    	->prependStylesheet($this->basePath('js/switchery/dist/switchery.min.css'))
+		//<!--  starrr -->
+    	->prependStylesheet($this->basePath('js/starrr/dist/starrr.css'))
+        ->prependStylesheet($this->basePath('js/jqueryui/themes/ui-lightness/jquery-ui.css')) 
+    	//<!-- Switchery -->
+    	->prependStylesheet($this->basePath('js/switchery/dist/switchery.min.css'))
+    	//<!-- Password -->
+    	->prependStylesheet($this->basePath('css/onix/password.css'))
+    	//<!-- New Checkbox -->
+    	->prependStylesheet($this->basePath('css/onix/newcheckbox.css'))
+    	//<!-- Onix -->
+        ->prependStylesheet($this->basePath('css/balloon.min.css'))
+    	->prependStylesheet($this->basePath('css/onix/onix.css'))
+        ->prependStylesheet($this->basePath('css/pqgrid.min.css'))
+        ->prependStylesheet($this->basePath('css/pqgrid.css'))
+        ->prependStylesheet($this->basePath('js/datatables/media/css/dataTables.bootstrap4.min.css'))
+        ->prependStylesheet($this->basePath('js/datatables/media/css/dataTables.jqueryui.min.css'))
+    	;
+    ?>
+    <?php echo $this->headScript()
+    	//<!-- Bootstrap -->
+        ->prependFile($this->basePath('js/onix/custom.js'))
+    	//<!-- Bootstrap -->
+        ->prependFile($this->basePath('js/bootstrap.min-v3.0.3.js'))
+    	//<!-- VCountdown contador de caracteres -->
+        ->prependFile($this->basePath('js/onix/vcountdown.js'))
+        //<!-- Auto Size Textarea -->
+        ->prependFile($this->basePath('js/onix/autosizetextarea.js'))
+        //<!-- <!-- NProgress -->
+        ->prependFile($this->basePath('js/nprogress/nprogress.js'))
+        //<!-- jQuery -->
+        ->prependFile($this->basePath('js/datatables/media/js/jquery.dataTables.min.js'))
+        ->prependFile($this->basePath('js/datatables/media/js/dataTables.jqueryui.min.js'))
+            
+        ->prependFile($this->basePath('js/fastclick/lib/fastclick.js'))
+        ->prependFile($this->basePath('js/jquery/jquery.smartWizard.js'))            
+        ->prependFile($this->basePath('js/jquery/pqgrid.min.js'))
+        ->prependFile($this->basePath('js/jquery/jquery.mask.min.js'))
+    	->prependFile($this->basePath('js/jqueryui/jquery-ui.min.js'))
+        ->prependFile($this->basePath('js/jquery/jquery.min.js'))
+//        ->prependFile($this->basePath('js/react-0.14.3/react.js'))
+//        ->prependFile($this->basePath('js/react-0.14.3/react-dom.js'))
+//        ->prependFile($this->basePath('js/react-0.14.3/react-dom-server.js'))
+//        ->prependFile($this->basePath('js/react-0.14.3/react-with-addons.js'))
+//        ->prependFile($this->basePath('js/react-0.14.3/babel.min.js'))
+//    	->setScript('var $ = jQuery.noConflict(true);')
+    	->prependFile($this->basePath('js/respond.min.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
+        ->prependFile($this->basePath('js/html5shiv.min.js'),   'text/javascript', array('conditional' => 'lt IE 9',));
+    ?>
+  </head>
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col hidden-print">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+            </div>
+            <div class="clearfix"></div>
+            <!-- menu profile quick info -->
+            <div class="profile">
+              <div class="profile_pic">
+                <img src="<?php echo $this->basePath('./images/img.jpg');?>" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Bem Vindo,</span>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+            <br />
+            <!-- menu lado esquerdo -->
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav class="" role="navigation">
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+                <div class="navbar-nav" style="width:530px;margin: 7px">
+                </div>
+              <ul class="nav navbar-nav navbar-right" style="width:400px">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="<?php echo $this->basePath('../images/img.jpg');?>" alt="">
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li>
+                    <li><a href="/login"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img src="<?php echo $this->basePath('../images/img.jpg');?>" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="<?php echo $this->basePath('../images/img.jpg');?>" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="<?php echo $this->basePath('../images/img.jpg');?>" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="<?php echo $this->basePath('../images/img.jpg');?>" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a>
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+	    <div class="container body">
+	      <div class="main_container">
+	        <!-- page content -->
+	        <div class="right_col" role="main">
+	          <div class="">
+	            <div class="clearfix"></div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_panel">
+                                    <?php echo $this->partial('layout/mensagens');?>        
+                                    <?php echo $this->content; ?>
+                                    <!-- /page content -->
+                                </div>
+                            </div>
+                        </div>
+	            </div>
+	          </div>
+	        </div>
+	        <!-- /page content -->
+	
+	        <!-- footer content -->
+	        <footer>
+	          <div class="pull-right">
+	            <a href="http://sistemaonix.com.br" target="_blank">Sistema Onix - Desenvolvimento de Sistemas Inteligentes</a>
+	          </div>
+	          <div class="clearfix"></div>
+	        </footer>
+	        <!-- /footer content -->
+	      </div> <!--  main container -->
+	    </div> <!-- container body  -->
+      </div>
+    </div>
+	<!-- Scripts -->
+    <?php echo $this->inlineScript()
+    	//<!-- jQuery -->
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/tooltip.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/tabs.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/spinner.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/sortable.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/slider.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/selectmenu.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/selectable.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/resizable.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/progressbar.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/menu.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-transfer.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-slide.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-size.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-shake.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-scale.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-pulsate.min.js')) 
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-puff.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-highlight.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-fold.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-fade.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-explode.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-drop.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-clip.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-bounce.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect-blind.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/effect.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/droppable.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/draggable.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/dialog.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/datepicker.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/button.min.js'))
+      	->prependFile($this->basePath('js/jqueryui/ui/minified/autocomplete.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/accordion.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/position.min.js'))
+//     	->prependFile($this->basePath('js/jqueryui/ui/minified/mouse.min.js'))
+     	->prependFile($this->basePath('js/jqueryui/ui/minified/widget.min.js'))
+     	->prependFile($this->basePath('js/jqueryui/ui/minified/core.min.js'))
+    	//<!-- FastClick -->
+        ->prependFile($this->basePath('js/fastclick/lib/fastclick.js'))
+	    //<!-- NProgress -->
+        ->prependFile($this->basePath('js/nprogress/nprogress.js'))
+    	//<!-- Chart.js -->
+        ->prependFile($this->basePath('js/Chart.js/dist/Chart.min.js'))
+    	//<!-- gauge.js -->
+        ->prependFile($this->basePath('js/bernii/gauge.js/dist/gauge.min.js'))
+    	//<!-- Skycons -->
+    	->prependFile($this->basePath('js/skycons/skycons.js'))
+    	//<!-- Custom Theme Scripts -->
+     	->prependFile($this->basePath('js/custom.js'))
+    	->prependFile($this->basePath('js/maps/gdp-data.js'))
+    	->prependFile($this->basePath('js/switchery/dist/switchery.min.js'))
+     	;    
+    ?>
+    <!-- Skycons do rodapé -->
+    <script>
+      $(document).ready(function() {
+        var icons = new Skycons({
+            "color": "#73879C"
+          }),
+          list = [
+            "clear-day", "clear-night", "partly-cloudy-day",
+            "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+            "fog"
+          ],
+          i;
+
+        for (i = list.length; i--;)
+          icons.set(list[i], list[i]);
+
+        icons.play();
+      });
+    </script>
+  </body>
+</html>

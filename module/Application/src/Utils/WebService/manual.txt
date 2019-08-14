@@ -1,0 +1,4 @@
+C:\projetos\php\oxWeb\module\Application\src\Application\Utils\WebService>php wsdl2php.php http://serveronix:8080/magento/api/v2_soap/?wsdl
+Analyzing WSDL.......................done
+Generating code...done
+Writing Weather.php...done

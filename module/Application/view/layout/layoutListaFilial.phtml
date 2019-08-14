@@ -1,0 +1,131 @@
+<?= $this->doctype() ?>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <?= $this->headTitle('Sistema Onix ')->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?= $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge');
+        ?>
+        <?= $this->headMeta()
+            ->appendName('description', 'Sistema Onix - Software de Gestão')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge');
+        ?>
+        <?= $this->headMeta()
+            ->appendName('empresa', 'Sistema Onix')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge');
+        ?>
+        <?= $this->headMeta()
+            ->appendName('author', 'Sistema Onix - Developement')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge');
+        ?>
+        <!-- Le styles -->
+        <?= $this->headLink(['rel' => 'shortcut icon', 'href' => $this->basePath() . 'imgSite/icons/favicon.png'])
+            ->prependStylesheet($this->basePath('cssSite/bootstrap.css'))
+            ->prependStylesheet($this->basePath('cssSite/responsive.css'))
+            ->prependStylesheet($this->basePath('cssSite/flexslider.css'))
+                ->prependStylesheet($this->basePath('cssSite/theme-style.css'))
+                ->prependStylesheet($this->basePath('cssSite/custom-style.css'))
+                ->prependStylesheet($this->basePath('cssSite/flexslider.css'))
+        ?>
+        <!--Your custom colour override-->
+        <link href="#" id="colour-scheme" rel="stylesheet">
+
+        <!-- Le fav and touch icons - @todo: fill with your icons or remove -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="imgSite/icons/114x114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="imgSite/icons/72x72.png">
+        <link rel="apple-touch-icon-precomposed" href="imgSite/icons/default.png">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300|Rambla|Calligraffitti' rel='stylesheet' type='text/css'>
+        <!-- Scripts -->
+        <?= $this->headScript()
+            ->prependFile($this->basePath('jsSite/html5.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath('jsSite/bootstrap-transition.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-alert.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-affix.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-modal.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-dropdown.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-scrollspy.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-tab.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-tooltip.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-popover.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-button.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-collapse.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-carousel.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap-typeahead.js'))
+            ->prependFile($this->basePath('jsSite/jquery.quicksand.js'))
+            ->prependFile($this->basePath('jsSite/jquery.flexslider-min.js'))
+            ->prependFile($this->basePath('jsSite/bootstrap.min.js'))
+            ->prependFile($this->basePath('jsSite/script.js'))
+            ->prependFile($this->basePath('jsSite/jquery.js'))
+        ?>
+    </head>
+<body class="page page-index">
+<div id="content">
+    <div class="container">
+        <?php echo $this->content; ?>
+    </div>
+</div>
+
+<div id="content-below" class="wrapper">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="upsell"> <small class="muted">Suporte Técnico <span class="spacer">//</span> Garantia <span class="spacer">//</span> Consultoria <span class="spacer">//</span> Planos mensais <span class="spacer">//</span> </small> <a href="pricing.htm" class="btn btn-primary">Seja nosso parceiro! <i class="icon-arrow-right"></i></a> </div>
+    </div>
+  </div>
+</div>
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="span3 col">
+        <div class="block contact-block"> 
+          <!--@todo: replace with company contact details-->
+          <h3>Contato</h3>
+          <address>
+          <p><abbr title="Phone"><i class="icon-phone"></i></abbr> 62 4141-1566</p>
+          <p><abbr title="Email"><i class="icon-envelope"></i></abbr><a href="mailto:contato@sistemaonix.com.br">contato@sistemaonix.com.br</a></p>
+          <p><abbr title="Address"><i class="icon-home"></i></abbr> Rua Maria Constant Quadra 7, Lote 20, Residencial Morumbi, Goiânia - GO.</p>
+          </address>
+        </div>
+      </div>
+      <div class="span5 col">
+        <div class="block">
+          <h3>Empresa</h3>
+          <p>Empresa com foco em automatização de negócios, com uso de tecnologias de última geração.</p>
+        </div>
+      </div>
+      <div class="span4 col">
+        <div class="block newsletter">
+          <h3>Newsletter</h3>
+          <p>Noticias do mundo dos negócios e tecnologia.</p>
+          <!--@todo: replace with mailchimp code-->
+          <form class="form-inline">
+            <div class="input-append">
+              <input class="input-medium" type="text" placeholder="Email" />
+              <button class="btn btn-primary" type="button">Cadastrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div id="toplink"><a href="#top" class="top-link" title="Back to top">Voltar ao Topo<i class="icon-chevron-up"></i></a></div>
+      <!--@todo: replace with company copyright details-->
+      <div class="subfooter">
+        <div class="span6">
+          <p>Site desenvolvido por <a href="#">Sistema Onix</a> | Copyright 2014 &copy; Sistemas Onix</p>
+        </div>
+        <div class="span6">
+          <ul class="inline pull-right">
+            <li><a href="#">Termos</a></li>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
